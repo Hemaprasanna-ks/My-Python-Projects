@@ -1,0 +1,28 @@
+print("Welcome to the Ultimate Python Quiz!")
+score = 0
+
+questions = {
+    "What does CPU stand for?": "central processing unit",
+    "What language is this quiz written in?": "python",
+    "Who developed Python?": "guido van rossum",
+    "What keyword is used to define a function in Python?": "def",
+    "What symbol is used to comment in Python?": "#"
+}
+
+for question, answer in questions.items():
+    user_ans = input(f"\n{question}\n> ").strip().lower()
+    if user_ans == answer:
+        print("✅ Correct!")
+        score += 1
+    else:
+        print(f"❌ Wrong! The correct answer is: {answer}")
+
+print("\n🎉 Quiz Completed!")
+print(f"Your final score: {score}/{len(questions)}")
+
+if score == 5:
+    print("🏆 Excellent!")
+elif score >= 3:
+    print("👏 Good job!")
+else:
+    print("😅 Keep practicing!")
